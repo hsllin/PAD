@@ -1,0 +1,24 @@
+<resources>
+  <string name="app_name">PAD</string>
+  <string name="pause_btn">暂停</string>
+  <string name="finish_btn">完工</string>
+  <string name="exit_btn">退出</string>
+  <string name="num">件数：315</string>
+  <string name="action_settings">折叠</string>
+  <string name="text1">
+    款号：2914792174
+    订单类型：紧急
+    交期：6-25
+  </string>
+  <string name="text2">
+    标准工时115
+    完工倒计时：50
+  </string>
+  <string name="text3">
+    工序：钉扣（专机）
+    设备：钉扣机
+    难度等级：5
+    质量要求：0.5
+
+  </string>
+</resources>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" xmlns:expandable="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="0px"
+    android:paddingRight="0px"
+    android:paddingTop="0px"
+    android:paddingBottom="0px"
+    tools:context="com.demo.hsl.pad.MainActivity">
+  <!--总体布局-->
+  <LinearLayout
+      android:orientation="horizontal"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_alignParentTop="true" android:layout_alignParentLeft="true" android:layout_alignParentStart="true">
+    <!--左侧布局-->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="534dp"
+        android:layout_height="match_parent"
+    >
+
+      <!--视频区-->
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="345dp"
+          android:background="@drawable/setbar_bg"
+      >
+        <VideoView
+            android:id="@+id/video_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+      </LinearLayout>
+     <!-- <LinearLayout
+          android:orientation="vertical"
+          android:layout_width="145dp"
+          android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="122dp" expandable:srcCompat="@drawable/dingjust"
+            android:id="@+id/imageView2"/>
+        <TextView
+            android:text="TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/textView3"/>
+        <TextView
+            android:text="TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/textView4"/>
+      </LinearLayout>-->
+      <!--图片展示区-->
+      <HorizontalScrollView
+          android:id="@+id/horizontalScrollView"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:scrollbars="none"
+          android:fadingEdge="none"
+      >
+        <!--联动左右滑动-->
+        <LinearLayout
+            android:id="@+id/linear"
+            android:background="@drawable/setbar_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+          <GridView
+              android:id="@+id/gridView"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:scrollbars="none"
+
+          >
+
+          </GridView>
+
+        </LinearLayout>
+      </HorizontalScrollView>
+
+    </LinearLayout>
+    <!--中间布局-->
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="355dp"
+        android:layout_height="match_parent">
+      <com.andexert.expandablelayout.library.ExpandableLayoutListView
+          android:id="@+id/listview"
+          android:layout_width="match_parent"
+          android:scrollbars="none"
+          android:layout_height="match_parent" android:layout_alignParentTop="true"
+          android:layout_alignParentLeft="true" android:layout_alignParentStart="true">
+
+      </com.andexert.expandablelayout.library.ExpandableLayoutListView>
+    </RelativeLayout>
+
+    <!--右边布局-->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+      <!--件数文本框-->
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="96dp"
+          android:background="@color/colorNum"
+          android:text="@string/num"
+          android:textStyle="bold"
+          android:textSize="@dimen/numText"
+          android:gravity="center"
+          android:layout_weight="0.47"/>
+      <!--暂停按钮-->
+      <Button android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:id="@+id/pause_btn"
+              android:text="@string/pause_btn"
+              android:background="@color/btn1"
+              android:textSize="@dimen/btn"
+      />
+      <!--完工按钮-->
+      <Button android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:id="@+id/finish_btn"
+              android:text="@string/finish_btn"
+              android:background="@color/btn2"
+              android:textSize="@dimen/btn"
+
+      />
+
+      <!--退出按钮-->
+      <Button android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:id="@+id/exit_btn"
+              android:text="@string/exit_btn"
+              android:textSize="@dimen/btn"
+              android:background="@color/btn3"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </LinearLayout>
+
+  </LinearLayout>
+
+</RelativeLayout>
